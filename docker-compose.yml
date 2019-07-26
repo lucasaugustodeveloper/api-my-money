@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+  app:
+    build: .
+    depends_on:
+      - mongodb
+    ports:
+      - "3003:3003"
+
+  mongodb:
+    image: mongodb:3.2.5
