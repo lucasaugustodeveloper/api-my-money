@@ -3,10 +3,17 @@ version: '2'
 services:
   app:
     build: .
+    networks:
+      - net
     depends_on:
       - mongodb
     ports:
-      - "3003:3003"
+      - "${PORT}:${PORT}"
 
   mongodb:
     image: mongodb:3.2.5
+    networks:
+      - net
+
+networks:
+  net:

@@ -4,10 +4,12 @@ services:
   app:
     build: .
     command: npm run dev
+    networks:
+      - net
     depends_on:
       - mongodb
     ports:
-      - "3003:3003"
+      - "${PORT}:${PORT}"
     volumes:
       - .:/home/app
       - /home/app/node_modules
@@ -16,3 +18,8 @@ services:
     image: mongo:3.2.5
     ports:
       - "27017:27017"
+    networks:
+      - net
+
+networks:
+  net:
