@@ -1,0 +1,1 @@
+node: node src/loader.js
