@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 mongoose.Promise = global.Promise
 
-const stringConnection = `${process.env.DB_URL}/${process.env.DB_NAME}`
+const stringConnection = `${process.env.DB_URL}:${process.env.DB_PORT}/${process.env.DB_NAME}`
 
 module.exports = mongoose.connect(`mongodb://${stringConnection}`, { useNewUrlParser: true })
 
