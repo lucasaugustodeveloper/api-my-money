@@ -23,7 +23,7 @@
     "mongoose-paginate": "^5.0.3",
     "node-restful": "^0.2.5",
     "pm2": "^4.5.5",
-    "snyk": "^1.521.0"
+    "snyk": "^1.1179.0"
   },
   "devDependencies": {
     "eslint": "^5.12.0",
