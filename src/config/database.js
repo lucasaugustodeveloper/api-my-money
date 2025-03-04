@@ -3,7 +3,7 @@ mongoose.Promise = global.Promise
 
 const stringConnection = `${process.env.DB_URL}/${process.env.DB_NAME}`
 
-module.exports = mongoose.connect(`mongodb://${stringConnection}`, { useNewUrlParser: true })
+module.exports = async () => mongoose.connect(`mongodb://${stringConnection}`)
 
 mongoose.Error.messages.general.required = "O atributo '{PATH}' é obrigatório"
 mongoose.Error.messages.Number.min = "O '{VALUE}' informando é menor que o limite mínimo de '{MIN}.'"
